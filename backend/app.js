@@ -15,7 +15,6 @@ const exchangeRateRoutes = require('./routes/exchangeRateRoutes');
 const settingsRoutes = require('./routes/settingsRoutes');
 const receiptRoutes = require('./routes/receiptRoutes');
 const exportRoutes = require('./routes/exportRoutes');
-const statementRoutes = require('./routes/statementRoutes');
 
 const app = express();
 app.set('trust proxy', 1);
@@ -34,7 +33,6 @@ app.use('/api/exchange-rates', exchangeRateRoutes);
 app.use('/api/settings', settingsRoutes);
 app.use('/api/receipts', receiptRoutes);
 app.use('/api/exports', exportRoutes);
-app.use('/api', statementRoutes);
 
 if (env.nodeEnv === 'production') {
   const frontendDist = path.resolve(__dirname, '../frontend/dist');
