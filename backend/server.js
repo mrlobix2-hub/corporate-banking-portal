@@ -1,7 +1,6 @@
 const app = require('./app');
 const env = require('./config/env');
 const db = require('./config/db');
-require('./scripts/seedAdmin');
 
 async function start() {
   try {
