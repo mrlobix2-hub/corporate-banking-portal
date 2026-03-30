@@ -17,6 +17,7 @@ const receiptRoutes = require('./routes/receiptRoutes');
 const exportRoutes = require('./routes/exportRoutes');
 
 const app = express();
+app.set('trust proxy', 1);
 app.use(helmet());
 app.use(cors({ origin: env.frontendUrl, credentials: true }));
 app.use(express.json({ limit: '2mb' }));
